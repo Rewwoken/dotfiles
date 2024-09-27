@@ -34,8 +34,4 @@ cmp.setup({
 		compare.length,
 		compare.order,
 	},
-	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
-	},
 })

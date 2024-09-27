@@ -2,6 +2,8 @@ require("nvim-web-devicons").setup({})
 
 require("neo-tree").setup({
 	popup_border_style = "rounded",
+	open_on_setup = false,
+	auto_open = false,
 	enable_git_status = true,
 	enable_diagnostics = false,
 	default_component_configs = {
@@ -28,8 +30,13 @@ require("neo-tree").setup({
 			},
 		},
 	},
+	filesystem = {
+		follow_current_file = {
+			enabled = true,
+		},
+	},
 	window = {
-		border = "none",
+		position = "float",
 		mapping_options = {
 			noremap = true,
 			nowait = true,
@@ -44,7 +51,6 @@ require("neo-tree").setup({
 	buffers = {
 		follow_current_file = {
 			enabled = true,
-			leave_dirs_open = false,
 		},
 	},
 })

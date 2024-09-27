@@ -7,6 +7,6 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-    require("rewwoken.configs.neo-tree")
-  end,
+		require("rewwoken.configs.neo-tree")
+	end,
 }

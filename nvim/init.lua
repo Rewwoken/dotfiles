@@ -9,3 +9,5 @@
 
 require("rewwoken.core")
 require("rewwoken.lazy")
+
+vim.cmd("colorscheme solarized-osaka")

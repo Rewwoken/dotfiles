@@ -2,8 +2,7 @@ local km = vim.keymap
 vim.g.mapleader = " "
 
 -- NeoTree
-km.set("n", "<leader>e", ":Neotree float focus<CR>")
-km.set("n", "<leader>o", ":Neotree float git_status<CR>")
+km.set("n", "<leader>e", ":Neotree reveal<CR>")
 
 -- Save on CTRL + S
 km.set("n", "<C-s>", ":w<CR>", {
@@ -54,11 +53,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		opts.desc = "Smart rename"
 		km.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
-		opts.desc = "Show line diagnostics"
-		km.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
-
 		opts.desc = "Show documentation for what is under cursor"
-		km.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+		km.set("n", "<leader>d", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
 
 		opts.desc = "Restart LSP"
 		km.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary

@@ -1,4 +1,4 @@
-local ts = require("nvim-treesitter")
+local ts = require("nvim-treesitter.configs")
 
 ts.setup({
 	ensure_installed = {
@@ -8,6 +8,7 @@ ts.setup({
 		"javascript",
 		"typescript",
 		"vue",
+		"json",
 		-- Required:
 		"c",
 		"lua",
@@ -16,6 +17,8 @@ ts.setup({
 		"query",
 		"markdown",
 		"markdown_inline",
+		"regex",
+		"bash",
 	},
 	sync_install = false,
 	highlight = {
