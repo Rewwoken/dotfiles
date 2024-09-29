@@ -11,7 +11,21 @@ lsp.cssls.setup({
 })
 lsp.emmet_ls.setup({
 	capabilities = capabilities,
-	filetypes = { "html", "css", "sass", "scss" },
+	filetypes = {
+		"html",
+		"css",
+		"javascriptreact",
+		"typescriptreact",
+		"sass",
+		"scss",
+	},
+	init_options = {
+		jsx = {
+			options = {
+				["output.selfClosingStyle"] = "xhtml",
+			},
+		},
+	},
 })
 lsp.jsonls.setup({
 	capabilities = capabilities,

@@ -1,6 +1,7 @@
 return {
-	"craftzdog/solarized-osaka.nvim",
-	lazy = false,
+	"ellisonleao/gruvbox.nvim",
 	priority = 1000,
-	opts = {},
+	config = function()
+		require("rewwoken.configs.colorscheme")
+	end,
 }

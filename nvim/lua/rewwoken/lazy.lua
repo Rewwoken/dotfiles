@@ -20,6 +20,22 @@ require("lazy").setup({
 	spec = {
 		{ import = "rewwoken.specs" },
 	},
-	install = {},
 	checker = { enabled = true },
+	perfomance = {
+		cache = {
+			enabled = true,
+		},
+		rtp = {
+			disabled_plugins = {
+				"gzip",
+				"netrwPlugin",
+				"rplugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
+	},
+	debug = false,
 })
