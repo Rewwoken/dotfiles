@@ -1,19 +1,4 @@
--- Require the gruvbox colorscheme
-local gruvbox = require("gruvbox")
-
--- Configure the gruvbox colorscheme
-gruvbox.setup({
-	italic = {
-		strings = false,
-		emphasis = true,
-		comments = true,
-		operators = false,
-		folds = true,
-	},
-})
-
--- Set the colorscheme to gruvbox
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme catppuccin")
 
 -- Configure the statuscolumn format
 vim.opt.statuscolumn = "%s%=%{v:relnum?v:relnum:v:lnum} "
@@ -63,4 +48,6 @@ if bg_color then
 	vim.cmd(string.format("highlight NoiceCmdlinePopupBorder guibg=%s", bg_color))
 	vim.cmd(string.format("highlight NoiceCmdlineIcon guibg=%s", bg_color))
 	vim.cmd(string.format("highlight NeotreeFloatTitle guibg=%s", bg_color))
+	vim.cmd(string.format("highlight NeotreeFloatNormal guibg=%s", bg_color))
+	vim.cmd(string.format("highlight NeotreeNormal guibg=%s", bg_color))
 end

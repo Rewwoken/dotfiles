@@ -3,6 +3,7 @@ require("mason-tool-installer").setup({
 		"stylua",
 		"prettier",
 		"prettierd",
+		"clang-format",
 		"eslint",
 	},
 })

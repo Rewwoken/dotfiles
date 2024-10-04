@@ -9,6 +9,7 @@ ts.setup({
 		"typescript",
 		"vue",
 		"json",
+		"cpp",
 		-- Required:
 		"c",
 		"lua",

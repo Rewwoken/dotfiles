@@ -1,22 +1,30 @@
 local lualine = require("lualine")
 
-local clients_lsp = function()
-	local bufnr = vim.api.nvim_get_current_buf()
+local client_format = {
+	ts_ls = "TS",
+	lua_ls = "Lua",
+	tailwindcss = "TW",
+	eslint = "ESLint",
+	emmet_language_server = "Emmet",
+	jsonls = "JSON",
+}
 
-	local clients = vim.lsp.buf_get_clients(bufnr)
+local clients_lsp = function()
+	local clients = vim.lsp.get_clients()
 	if next(clients) == nil then
 		return ""
 	end
 
-	local c = {}
+	local client_names = {}
 	for _, client in pairs(clients) do
-		table.insert(c, client.name)
+		local formatted_name = client_format[client.name] or client.name
+		table.insert(client_names, formatted_name)
 	end
-	return "\u{f085}  " .. table.concat(c, " | ")
+
+	return "\u{f085}  " .. table.concat(client_names, " | ")
 end
 
 lualine.setup({
-	theme = "ashes",
 	sections = {
 		lualine_c = {
 			{
@@ -24,6 +32,9 @@ lualine.setup({
 				path = 1,
 			},
 		},
-		lualine_x = { clients_lsp, "filetype" },
+		lualine_x = {
+			clients_lsp,
+			{ "filetype", icon_only = true },
+		},
 	},
 })

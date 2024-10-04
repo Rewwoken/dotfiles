@@ -16,6 +16,7 @@ noice.setup({
 local notify = require("notify")
 
 notify.setup({
-	stages = "fade",
-	timeout = 1000,
+	fps = 144,
+	stages = "fade_in_slide_out",
+	timeout = 3000,
 })

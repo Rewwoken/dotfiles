@@ -1,7 +1,6 @@
 local lsp = require("lspconfig")
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 lsp.html.setup({
 	capabilities = capabilities,
@@ -9,7 +8,7 @@ lsp.html.setup({
 lsp.cssls.setup({
 	capabilities = capabilities,
 })
-lsp.emmet_ls.setup({
+lsp.emmet_language_server.setup({
 	capabilities = capabilities,
 	filetypes = {
 		"html",
@@ -18,13 +17,6 @@ lsp.emmet_ls.setup({
 		"typescriptreact",
 		"sass",
 		"scss",
-	},
-	init_options = {
-		jsx = {
-			options = {
-				["output.selfClosingStyle"] = "xhtml",
-			},
-		},
 	},
 })
 lsp.jsonls.setup({

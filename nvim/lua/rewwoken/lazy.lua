@@ -21,7 +21,7 @@ require("lazy").setup({
 		{ import = "rewwoken.specs" },
 	},
 	checker = { enabled = true },
-	perfomance = {
+	performance = {
 		cache = {
 			enabled = true,
 		},
