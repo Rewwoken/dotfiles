@@ -1,7 +1,7 @@
 local lsp = require("lspconfig")
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-local ts_plugin = "/home/rewwoken/.nvm/versions/node/v20.17.0/lib/node_modules/@vue/typescript-plugin"
+local ts_plugin = "/home/rewwoken/.nvm/versions/node/v20.18.0/lib/node_modules/@vue/typescript-plugin"
 
 lsp.ts_ls.setup({
 	capabilities = capabilities,

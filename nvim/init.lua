@@ -11,8 +11,3 @@
 
 require("rewwoken.core")
 require("rewwoken.lazy")
-
--- vim.api.nvim_create_autocmd("BufWritePost", {
--- 	pattern = { "*.ts", "*.js", "*.vue" },
--- 	command = "EslintFixAll",
--- })

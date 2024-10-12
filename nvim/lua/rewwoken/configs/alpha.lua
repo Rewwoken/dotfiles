@@ -495,3 +495,11 @@ dashboard.section.buttons.val = {
 }
 
 alpha.setup(dashboard.opts)
+
+-- Disable statuscolumn in alpha.nvim
+vim.api.nvim_create_autocmd("Filetype", {
+	pattern = "alpha",
+	callback = function()
+		vim.opt_local.statuscolumn = ""
+	end,
+})

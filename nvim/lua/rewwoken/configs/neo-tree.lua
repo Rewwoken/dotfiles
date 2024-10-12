@@ -1,4 +1,7 @@
-require("nvim-web-devicons").setup({})
+local icons = require("mini.icons")
+
+icons.setup({})
+icons.mock_nvim_web_devicons()
 
 require("neo-tree").setup({
 	popup_border_style = "rounded",
